@@ -27,16 +27,16 @@ angular.module('DefineProjectControllers', []).
         }
 
         $scope.basePeriodDurationSelected = {id: -1, caption: 'Select Base Period Duration'};
-        $scope.basePeriodDurations = [{id: '0', caption: '3 Month'},
-            {id: '1', caption: '6 Month'},
+        $scope.basePeriodDurations = [{id: '0', caption: '3 Months'},
+            {id: '1', caption: '6 Months'},
             {id: '2', caption: '1 Year'}];
         $scope.selectBasePeriodDuration = function(basePeriodDuration) {
             $scope.basePeriodDurationSelected = basePeriodDuration;
         }
 
         $scope.optionPeriodDurationSelected = {id: -1, caption: 'Select Option Period Duration'};
-        $scope.optionPeriodDurations = [{id: '0', caption: '3 Month'},
-            {id: '1', caption: '6 Month'},
+        $scope.optionPeriodDurations = [{id: '0', caption: '3 Months'},
+            {id: '1', caption: '6 Months'},
             {id: '2', caption: '1 Year'}];
         $scope.selectOptionPeriodDuration = function(optionPeriodDuration) {
             $scope.optionPeriodDurationSelected = optionPeriodDuration;
