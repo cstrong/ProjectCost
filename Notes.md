@@ -32,3 +32,7 @@ VirtualEnv
 Flask
 -----
 > `pip install flask`
+
+PyCharm Preferences
+-------------------
+> Install `flask-bootstrap`, `flask-script`
