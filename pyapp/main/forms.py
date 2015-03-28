@@ -2,7 +2,7 @@
 #
 # Project Cost project
 #
-# config.py
+# forms.py
 #
 #########################################
 
