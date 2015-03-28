@@ -1,0 +1,38 @@
+<div class="row" style="padding-left: 5px; margin-bottom: 10px">
+    <div class="col-md-3">
+        <h5>Project Name</h5>
+        <input ng-model="projectName" type="text" class="form-control" placeholder="Project Name"/>
+    </div>
+</div>
+<div class="row" style="padding-left: 5px; margin-bottom: 10px">
+    <div class="col-md-3">
+        <h5>Geographic Location</h5>
+        <input ng-model="geoLocation" type="text" class="form-control" placeholder="Enter City, State or ZIP Code"/>
+    </div>
+</div>
+<div class="row" style="padding-left: 5px; margin-bottom: 10px">
+    <div class="col-md-3">
+        <drop-down options="projectTypes" option-selected="projectTypeSelected"/>
+    </div>
+</div>
+<div class="row" style="padding-left: 5px; margin-bottom: 10px">
+    <div class="col-md-3">
+        <h5>Labor Model</h5>
+        <drop-down options="laborModels" option-selected="laborModelSelected"/>
+    </div>
+</div>
+<div class="row" style="padding-left: 5px; margin-bottom: 10px">
+    <div class="col-md-2">
+        <h5>Base Period Duration</h5>
+        <drop-down options="basePeriodDurations" option-selected="basePeriodDurationSelected"/>
+    </div>
+    <div class="col-md-1">
+        <h5># of Option Periods</h5>
+        <input type="number" class="form-control" min="1" style="width: 125px"/>
+    </div>
+    <div class="col-md-2">
+        <h5>Option Period Duration</h5>
+        <drop-down options="optionPeriodDurations" option-selected="optionPeriodDurationSelected"/>
+    </div>
+</div>
+<a type="button" class="btn btn-primary" style="margin-left: 5px">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
