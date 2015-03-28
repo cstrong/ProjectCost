@@ -1,0 +1,41 @@
+<div id="landingPageCarousel" class="carousel slide" data-ride="carousel" style="width: 1600px; margin-left: auto; margin-right: auto;">
+    <ol class="carousel-indicators">
+        <li data-target="#landingPageCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#landingPageCarousel" data-slide-to="1"></li>
+        <li data-target="#landingPageCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/photo1.jpg" alt="bridges">
+        </div>
+        <div class="item">
+            <img src="images/photo2.jpg" alt="micro">
+        </div>
+        <div class="item">
+            <img src="images/photo3.jpg" alt="wind">
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#landingPageCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#landingPageCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<ul class="nav nav-pills nav-stacked">
+    <li ng-repeat="project in projects" role="presentation">
+        <a>
+            <table>
+                <tr>
+                    <td style="width: 200px">{{project.projectName}}</td>
+                    <td style="width: 200px">{{project.projectType}}</td>
+                    <td style="width: 200px">{{project.laborModel}}</td>
+                </tr>
+            </table>
+        </a>
+    </li>
+</ul>

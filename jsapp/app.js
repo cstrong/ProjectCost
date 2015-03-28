@@ -1,6 +1,6 @@
 'use strict';
 
-// Declare appJS level module which depends on views, and components
+// Declare jsapp level module which depends on views, and components
 angular.module('app', [
   'ngRoute',
   'ngGrid',

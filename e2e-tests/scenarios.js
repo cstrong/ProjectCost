@@ -2,7 +2,7 @@
 
 /* https://github.com/angular/protractor/blob/master/docs/toc.md */
 
-describe('my appJS', function() {
+describe('my jsapp', function() {
 
   browser.get('index.html');
 
