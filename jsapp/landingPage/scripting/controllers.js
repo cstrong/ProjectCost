@@ -3,7 +3,11 @@
 angular.module('landingPageControllers', []).
     controller('LandingPageCtrl', ['$scope', 'Projects', '$q', '$timeout', function($scope, Projects, $q, $timeout /* @todo: testing only - remove */) {
         $scope.projects = [];
-        $scope.menus = [{caption: 'Define Project', href: "#/DefineProject", active: false}];
+        $scope.menus = [
+            {caption: 'Home', href: "#/LandingPage", active: false},
+            {caption: 'Projects', href: "#/Projects", active: false},
+            {caption: 'Site News', href: "#/SiteNews", active: false}
+        ];
         $scope.setActive = function(menu) {
             $scope.menus.forEach(function(m) {
                 m.active = menu.href == m.href;

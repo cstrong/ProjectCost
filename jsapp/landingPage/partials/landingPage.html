@@ -1,4 +1,4 @@
-<div id="landingPageCarousel" class="carousel slide" data-ride="carousel" style="width: 1600px; margin-left: auto; margin-right: auto;">
+<div id="landingPageCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#landingPageCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#landingPageCarousel" data-slide-to="1"></li>
@@ -26,16 +26,41 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-<ul class="nav nav-pills nav-stacked">
-    <li ng-repeat="project in projects" role="presentation">
-        <a>
-            <table>
-                <tr>
-                    <td style="width: 200px">{{project.projectName}}</td>
-                    <td style="width: 200px">{{project.projectType}}</td>
-                    <td style="width: 200px">{{project.laborModel}}</td>
-                </tr>
-            </table>
-        </a>
-    </li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Welcome to ProjectCost</h2>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+        </div>
+        <div class="col-md-3">
+            <h3>Site News</h3>
+        </div>
+        <div class="col-md-3">
+            <h3>Recent Projects</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-repeat="project in projects" role="presentation">
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 25px">
+                                <a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            </td>
+                            <td style="width: 50px">
+                                <a><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                            <td>
+                                <a style="width: 100%" type="button" class="btn btn-primary">{{project.projectName}}</a>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2" style="text-align: center">
+            <h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h2>
+            <a type="button" class="btn btn-primary" href="#/DefineProject">Estimate New Project</a>
+        </div>
+    </div>
+</div>
+
