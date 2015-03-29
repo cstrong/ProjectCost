@@ -1,12 +1,13 @@
 'use strict';
 
-// Declare jsapp level module which depends on views, and components
 angular.module('app', [
   'ngRoute',
   'ngGrid',
   'ngResource',
   'dropDownDirectives',
   'projectServices',
+  'staffingServices',
+  'laborCategoryServices',
   'landingPageControllers',
   'projectsControllers',
   'defineProjectControllers',
