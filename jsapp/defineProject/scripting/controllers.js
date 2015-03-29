@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('DefineProjectControllers', []).
-    controller('DefineProjectCtrl', ['$scope', function($scope) {
+angular.module('defineProjectControllers', []).
+    controller('DefineProjectCtrl', ['$scope', 'activeMenu', function($scope, activeMenu) {
+        activeMenu.href = '';
         $scope.projectTypeSelected = {id: -1, caption: 'Select Project Type'};
         $scope.projectTypes = [{id: '0', caption: 'Information System', disabled: false},
             {id: '1', caption: 'Construction', disabled: true}];

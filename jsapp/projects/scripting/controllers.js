@@ -1,33 +1,14 @@
 'use strict';
 
-angular.module('landingPageControllers', []).
-    controller('LandingPageCtrl', ['$scope', 'Projects', 'activeMenu', '$q', '$timeout', function ($scope, Projects, activeMenu, $q, $timeout /* @todo: testing only - remove */) {
+angular.module('projectsControllers', []).
+    controller('ProjectsCtrl', ['$scope', 'Projects', 'activeMenu', '$q', '$timeout', function ($scope, Projects, activeMenu, $q, $timeout /* @todo: testing only - remove */) {
         activeMenu.href = location.hash;
-        $scope.projects = [];
-        $scope.activeMenu = activeMenu;
-        $scope.menus = [
-            {caption: 'Home', href: "#/LandingPage", active: true},
-            {caption: 'Projects', href: "#/Projects", active: false},
-            {caption: 'Site News', href: "#/SiteNews", active: false}
-        ];
-        $scope.setActive = function (menu) {
-            $scope.menus.forEach(function (m) {
-                m.active = menu.href == m.href;
-            })
-        }
         var errorProjects = function (reason) {
             // @todo: error handling
         }
         var successProjects = function (data) {
             $scope.projects = data;
         }
-
-        $scope.$watchCollection('activeMenu', function(newValue, oldValue) {
-            if (newValue.href == oldValue.href) return;
-            $scope.menus.forEach(function(menu) {
-                menu.active = menu.href == newValue.href;
-            });
-        })
         var deferred = $q.defer();
         var promise = deferred.promise;
         var Projects = {
@@ -63,4 +44,20 @@ angular.module('landingPageControllers', []).
                     estimatedValue: '$23,302,338.00'
                 }]);
         }));
-    }]);
+
+        $scope.projectsOptions = {
+            data: 'projects',
+            multiSelect: false,
+            columnDefs: [
+                {field: 'projectName', displayName: 'Name', width: '400px'},
+                {field: 'geoLocation', displayName: 'Region', width: '120px'},
+                {field: 'projectType', displayName: 'Type', width: '200px'},
+                {field: 'size', displayName: 'Size', width: '100px'},
+                {field: 'laborModel', displayName: 'Labor Model', width: '120px'},
+                {field: 'basePeriodDuration', displayName: 'Base Period', width: '120px'},
+                {field: 'optionPeriodsNumber', displayName: 'Options', width: '100px'},
+                {field: 'escalationRate', displayName: 'Escalation', width: '120px'},
+                {field: 'estimatedValue', displayName: 'Estimated Value', width: '200px'}
+            ]
+        };
+    }])

@@ -7,3 +7,13 @@
     height: auto;
     max-width: none;
 }
+
+.pageHeader {
+    color: darkred !important;
+}
+
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 1500px;
+    height: 300px
+}
