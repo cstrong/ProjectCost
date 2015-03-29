@@ -20,6 +20,7 @@ angular.module('projectsControllers', []).
         $timeout(angular.bind({deferred: deferred}, function () {
             this.deferred.resolve([
                 {
+                    projectId: 'abc',
                     projectName: 'Project Cost',
                     geoLocation: '10001',
                     projectType: 'Information System',
@@ -32,6 +33,7 @@ angular.module('projectsControllers', []).
                     estimatedValue: '$33,002,133.00'
                 },
                 {
+                    projectId: 'def',
                     projectName: 'HourGlass',
                     geoLocation: '10001',
                     projectType: 'Information System',

@@ -41,6 +41,10 @@ Flask and Plugins
 
 > `pip install flask-mail`
 
+> `pip install flask-triangle`
+
+> `pip install flask-restful`
+
 PyCharm Preferences
 -------------------
 > Install `flask-bootstrap`
@@ -50,6 +54,10 @@ PyCharm Preferences
 > Install `flask-mongoengine`
 
 > Install `flask-mail`
+
+> Install 'flask-triangle`
+
+> Install `flask-restful`
 
 Generate requirements.txt
 --------------------------

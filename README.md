@@ -53,6 +53,11 @@ Day Two
 * Signed up for Heroku cloud hosting
 * Reviewed Hourglass source code
 
+Day Three
+---------
+* Figured out how to make static resources work with Flask blueprints
+* Integrated AngularJS front-end with Flask backend via flask-triangle
+* Added restful service via flask-
 
 
 Next Steps
