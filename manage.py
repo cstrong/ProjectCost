@@ -9,7 +9,7 @@
 
 #!/usr/bin/env python
 import os
-from pyapp import create_app
+from app import create_app
 from flask.ext.script import Manager, Shell
 
 app = create_app(os.getenv('PROJECT_COST_CONFIG') or 'default')

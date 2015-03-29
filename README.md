@@ -27,6 +27,7 @@ Tools Used
 * AngularJS -- Javascript web framework
 * Twitter Bootstrap -- CSS framework
 * PyUnit -- python unit testing
+* Gunicorn -- web server for static files
 
 Work that was done
 ==================
@@ -50,15 +51,19 @@ Day Two
 * Started creating high-fidelity mockups for screens
 * Created data model
 * Signed up for Heroku cloud hosting
-* Setup MongoDB for persistence
-* Setup first ReSTFul API
 * Reviewed Hourglass source code
 
 
 
-Tools to investigate
---------------------
-* MongoDB for persistence
+Next Steps
+----------
+* Use MongoDB for persistence, implement all of the backend
+* http://docs.mongoengine.org/en/latest/tutorial.html
+
+* Restful API  https://flask-restful.readthedocs.org/en/0.3.2/quickstart.html
+
+* http://stackoverflow.com/questions/18726817/static-folder-not-functioning-in-flask-debug-mode-and-in-development
+
 * Behave for BDD
 * HTTPie for testing web services
 * Jasmine for JS unit testing

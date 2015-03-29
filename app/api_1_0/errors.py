@@ -8,7 +8,7 @@
 
 
 from flask import jsonify
-from pyapp.exceptions import ValidationError
+from app.exceptions import ValidationError
 from . import api
 
 

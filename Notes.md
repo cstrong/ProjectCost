@@ -32,18 +32,33 @@ VirtualEnv
 Flask and Plugins
 -----------------
 > `pip install flask`
+
 > `pip install flask-bootstrap`
+
 > `pip install flask-script`
+
 > `pip install flask-mongoengine`
+
 > `pip install flask-mail`
 
 PyCharm Preferences
 -------------------
 > Install `flask-bootstrap`
+
 > Install `flask-script`
+
 > Install `flask-mongoengine`
+
 > Install `flask-mail`
 
 Generate requirements.txt
 --------------------------
 > `pip freeze >requirements.txt`
+
+Run Tests
+---------
+> `python manage.py test`
+
+Run Server
+----------
+> `python manage.py runserver`
