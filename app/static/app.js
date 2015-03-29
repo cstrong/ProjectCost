@@ -13,9 +13,9 @@ angular.module('app', [
   'staffingControllers'
 ]).constant('dataProvider', {url: 'http://'}).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/LandingPage', {templateUrl: 'landingPage/partials/landingPage.html', controller: 'LandingPageCtrl'});
-  $routeProvider.when('/Projects', {templateUrl: 'projects/partials/projects.html', controller: 'ProjectsCtrl'});
-  $routeProvider.when('/DefineProject', {templateUrl: 'defineProject/partials/defineProject.html', controller: 'DefineProjectCtrl'});
-  $routeProvider.when('/Staffing', {templateUrl: 'staffing/partials/staffing.html', controller: 'StaffingCtrl'});
+  $routeProvider.when('/LandingPage', {templateUrl: 'static/landingPage/partials/landingPage.html', controller: 'LandingPageCtrl'});
+  $routeProvider.when('/Projects', {templateUrl: 'static/projects/partials/projects.html', controller: 'ProjectsCtrl'});
+  $routeProvider.when('/DefineProject', {templateUrl: 'static/defineProject/partials/defineProject.html', controller: 'DefineProjectCtrl'});
+  $routeProvider.when('/Staffing', {templateUrl: 'static/staffing/partials/staffing.html', controller: 'StaffingCtrl'});
   $routeProvider.otherwise({redirectTo: '/LandingPage'});
 }]).value('activeMenu', {href: "#/LandingPage"});
