@@ -3,6 +3,16 @@
 angular.module('staffingControllers', []).
     controller('StaffingCtrl', ['$scope', 'Staffing', 'LaborCategory', 'activeMenu', '$q', '$timeout', function ($scope, Staffing, LaborCategory, activeMenu, $q, $timeout /* @todo: testing only - remove */) {
         activeMenu.href = location.hash;
+        $scope.minEducationLevelSelected = {id: -1, caption: 'Select Education Level'};
+        $scope.minEducationLevels = [{id: '0', caption: 'Master Degree'},
+            {id: '1', caption: 'Bachelor Degree'},
+            {id: '2', caption: 'High School'}];
+        $scope.maxEducationLevelSelected = {id: -1, caption: 'Select Education Level'};
+        $scope.maxEducationLevels = [{id: '0', caption: 'Ph.D/J.D.'},
+            {id: '1', caption: 'Master Degree'},
+            {id: '2', caption: 'Bachelor Degree'},
+            {id: '3', caption: 'High School'}];
+
         var errorStaffingTemplate = function (reason) {
             // @todo: error handling
         }
@@ -49,8 +59,13 @@ angular.module('staffingControllers', []).
                 }]);
         }));
 
-        $scope.updateCost = function(entity) {
+        $scope.updateCost = function (entity) {
             entity.cost = entity.quantity * entity.averageRate * entity.annualHours;
+        }
+
+        $scope.getLcatList = function(entity) {
+            $scope.selectedLaborCategory = entity.laborCategory;
+            $('#lcat').modal({backdrop: 'static'});
         }
 
         var numberEditor = '<input id="editor" type="number" min="1" ng-class="\'colt\' + col.index" ng-input="COL_FIELD" ng-model="COL_FIELD" ng-change="updateCost(row.entity)"/>';
@@ -72,7 +87,7 @@ angular.module('staffingControllers', []).
                 {field: 'averageRate', displayName: 'Average Rate', width: '120px', enableCellEdit: false},
                 {field: 'annualHours', displayName: 'Annual Hours', width: '120px', enableCellEdit: true, editableCellTemplate: numberEditor},
                 {field: 'cost', displayName: 'Cost', width: '120px', enableCellEdit: false},
-                {field: 'laborCategory', displayName: '', width: '130px', enableCellEdit: false, cellTemplate: '<a><span class="glyphicon glyphicon-th-list"> <label class="gridLink">LCAT list</label></a>'}
+                {field: 'laborCategory', displayName: '', width: '130px', enableCellEdit: false, cellTemplate: '<a ng-click="getLcatList(row.entity)"><span class="glyphicon glyphicon-th-list"> <label class="gridLink">LCAT list</label></a>'}
             ]
         };
     }])
