@@ -37,13 +37,11 @@ Flask and Plugins
 
 > `pip install flask-script`
 
-> `pip install flask-mongoengine`
-
-> `pip install flask-mail`
-
 > `pip install flask-triangle`
 
 > `pip install flask-restful`
+
+> `pip install flask-mongoengine`
 
 PyCharm Preferences
 -------------------
@@ -51,13 +49,11 @@ PyCharm Preferences
 
 > Install `flask-script`
 
-> Install `flask-mongoengine`
-
-> Install `flask-mail`
-
 > Install 'flask-triangle`
 
 > Install `flask-restful`
+
+> Install `flask-mongoengine`
 
 Generate requirements.txt
 --------------------------
@@ -70,3 +66,4 @@ Run Tests
 Run Server
 ----------
 > `python manage.py runserver`
+

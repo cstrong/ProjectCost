@@ -8,13 +8,16 @@
 
 from flask import Flask
 from flask.ext.bootstrap import Bootstrap
-from flask.ext.mail import Mail
+
+# Monkey patch to make flask-triangle work, since it is not yet compatible with python3
+import builtins
+builtins.unicode = str
 from flask.ext.triangle import Triangle
+
 from flask.ext.restful import Api
 from config import config
 
 bootstrap = Bootstrap()
-mail = Mail()
 triangle = Triangle()
 
 def create_app(config_name):
@@ -24,7 +27,6 @@ def create_app(config_name):
     config[config_name].init_app(app)
 
     bootstrap.init_app(app)
-    mail.init_app(app)
     triangle.init_app(app)
     api = Api(app)
 

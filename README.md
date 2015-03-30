@@ -27,7 +27,6 @@ Tools Used
 * AngularJS -- Javascript web framework
 * Twitter Bootstrap -- CSS framework
 * PyUnit -- python unit testing
-* Gunicorn -- web server for static files
 
 Work that was done
 ==================
@@ -57,7 +56,7 @@ Day Three
 ---------
 * Figured out how to make static resources work with Flask blueprints
 * Integrated AngularJS front-end with Flask backend via flask-triangle
-* Added restful service via flask-
+* Added restful service via flask-restful
 
 
 Next Steps

@@ -49,6 +49,5 @@ class Project(Resource):
 
 class Projects(Resource):
     def get(self):
-        retval = {}
-        retval['result'] = all_projects.values()
-        return jsonify(retval)
+        result = { 'result': list(all_projects.values()) }
+        return jsonify(result)
